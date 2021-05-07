@@ -45,14 +45,6 @@ def one(input1, input2):
 	elif len(input1)<len(input2):
 		return input2
 
-def test_one():
-    assert one("hi","hello") == "hello"
-    assert one("three", "two") == "three"
-    assert one("three", "hello") == "three hello"
-    assert one("echo", "print") == "print"
-    assert one("fire","rib") == "fire"
-
-print(test_one())
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -76,6 +68,14 @@ print(test_one())
 	# No hints for this question
 
 def two(arg1):
+
+	if arg1%3==0 and arg1%5==0:
+		return "fizzbuzz"
+	elif arg1%3==0:
+		return "fizz"
+	elif arg1%5==0:
+		return "buzz"
+	
 	return "null"
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
