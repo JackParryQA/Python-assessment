@@ -162,11 +162,9 @@ def factorial(n):
 		return n * factorial(n-1)
 
 def five(input):
-	# i=input
 	x=factorial(int(input))
 	return x
 
-print(five(4))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -188,7 +186,12 @@ print(five(4))
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def six(string, int, char):
+	string=string.lower()
+	if int<=len(string) and string[int-1]==char:
+		return True
+
 	return False
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
