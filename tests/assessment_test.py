@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath("D:\QA\QA Training\Python\Python-assessment"))
+
 import pytest
 from questions import python1
 
