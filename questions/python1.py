@@ -247,7 +247,20 @@ def seven(inputString, char):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def eight(arg1):
-	return 0
+
+	x=arg1.split(" ")
+	# print(x)
+	sum=0
+	for i in range(len(x)):
+		s=x[i]
+		sum=0
+		for j in range(len(x[i])):
+			sum+=int(s[j])
+			
+		x[i]=sum
+	
+	return max(x)
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
