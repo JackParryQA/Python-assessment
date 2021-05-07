@@ -1,3 +1,5 @@
+import re
+
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# INSTRUCTIONS
@@ -219,8 +221,9 @@ def seven(inputString, char):
 		if inputString[i]==char:
 			print(i+1)
 			return i+1
+	
 	return -1
-
+	# return inputString.find(char)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -287,8 +290,28 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
-	return ""
+	# input=input.lower()
 
+	r=re.search("bert(.*)bert", input, re.IGNORECASE)
+	# output=any(result)
+	
+	if r:
+		return r.group(1)
+	else:
+		# result=r.group(1)
+		# print(result)
+		# return result
+		return ''
+	
+
+def test_nine():
+    assert nine("bertclivebert") == "clive"
+    assert nine("xxbertfridgebertyy") == "fridge"
+    assert nine("xxBertfridgebERtyy") == "fridge"
+    assert nine("xxbertyy") == ""
+    assert nine("xxbeRTyy") == ""
+
+print(test_nine())
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 10>
