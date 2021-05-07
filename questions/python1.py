@@ -125,7 +125,18 @@ def three(input):
 
 
 def four(input):
-    return False
+	input=input.lower()
+	for i in range(len(input)):
+		if input[i]=='c' and i<=len(input)-2:
+			if input[i+1]=='e' and input[i+2]=='i':
+				return True
+			else:
+				return False
+		elif input[i]!='c' and i<=len(input)-2:
+			if input[i+1]=='i' and input[i+2]=='e':
+				return True
+    
+	return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
