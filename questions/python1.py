@@ -290,28 +290,12 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
-	# input=input.lower()
-
 	r=re.search("bert(.*)bert", input, re.IGNORECASE)
-	# output=any(result)
-	
 	if r:
 		return r.group(1)
 	else:
-		# result=r.group(1)
-		# print(result)
-		# return result
 		return ''
 	
-
-def test_nine():
-    assert nine("bertclivebert") == "clive"
-    assert nine("xxbertfridgebertyy") == "fridge"
-    assert nine("xxBertfridgebERtyy") == "fridge"
-    assert nine("xxbertyy") == ""
-    assert nine("xxbeRTyy") == ""
-
-print(test_nine())
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
 	# <QUESTION 10>
@@ -340,7 +324,14 @@ print(test_nine())
 	# help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def ten(input):
-	return []
-
+	x=input.split(',')
+	output = list()
+	for i in range(0,len(x),4):
+		if x[i+2]=='False':
+			output.append(x[i])
+	
+	output=set(output)
+	output=list(output)
+	return output
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
