@@ -155,8 +155,18 @@ def four(input):
 
 	# You may need to create a list of numbers from 0 to i, take a look at help(range).
 
+def factorial(n):
+	if n<1:
+		return 1
+	else:
+		return n * factorial(n-1)
+
 def five(input):
-	return 1
+	# i=input
+	x=factorial(int(input))
+	return x
+
+print(five(4))
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
